@@ -1,7 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+
 
 module.exports = {
     entry: ['@babel/polyfill', './src/js/app.js', './resources/sass/main.scss'],
@@ -52,12 +54,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: 'style-loader!css-loader'
+                use: ['style-loader', 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style-loader!css-loader!sass-loader'
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
@@ -70,5 +72,4 @@ module.exports = {
 
         ]
     }
-
 }
