@@ -9,7 +9,15 @@
             </div>
             <div class="col-xs-5">
                 <form class="signup-form">
+
+                    {{#each registerData}}
                     <div class="form-group">
+                        <input type="{{type}}" name="{{label}}" class="form-control" required />
+                        <label class="form-label">{{label}}
+                        </label>
+                    </div>
+                    {{/each}}
+                    {{!-- <div class="form-group">
                         <input type="text" name="First Name" class="form-control" required />
                         <label class="form-label">First Name
                         </label>
@@ -35,7 +43,13 @@
                         </label>
                         <button class="signup-btn">Signup
                         </button>
+                    </div> --}}
+
+                    <div class="form-group">
+                        <button class="signup-btn">Signup
+                        </button>
                     </div>
+
                 </form>
             </div>
         </div>

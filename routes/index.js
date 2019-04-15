@@ -2,15 +2,18 @@ var express = require('express');
 var router = express.Router();
 var banners = require('../resources/data/banners/index.get.json');
 var prodCategories = require('../resources/data/categories/index.get.json');
+var loginData = require('../resources/data/label/login.get.json');
+var registerData = require('../resources/data/label/register.get.json');
+
 
 var products = require('../resources/data/products/index.get.json');
 var cart = {
-        items: [],
-        count: 0,
-        totalPrice: 0
-    }
-    /* GET home page. */
-router.get('/', function(req, res, next) {
+    items: [],
+    count: 0,
+    totalPrice: 0
+}
+/* GET home page. */
+router.get('/', function (req, res, next) {
     ActiveBanners = banners.filter(banner => banner.isActive);
     ActiveCategories = prodCategories.filter(category => category.enabled);
     res.render('index', {
@@ -20,7 +23,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
-router.get('/product', function(req, res, next) {
+router.get('/product', function (req, res, next) {
     ActiveCategories = prodCategories.filter(category => category.enabled);
     res.render('product', {
         productList: products,
@@ -29,7 +32,7 @@ router.get('/product', function(req, res, next) {
     });
 });
 
-router.get('/product/:id', function(req, res, next) {
+router.get('/product/:id', function (req, res, next) {
     var catId = req.params.id;
     ActiveCategories = prodCategories.filter(category => category.enabled);
     productListDetail = products.filter(prod => prod.category === catId);
@@ -40,19 +43,19 @@ router.get('/product/:id', function(req, res, next) {
     });
 });
 
-router.get('/login', function(req, res, next) {
+router.get('/login', function (req, res, next) {
     res.render('login.hbs', {
-        cart
+        cart, loginData
     });
 });
 
-router.get('/register', function(req, res, next) {
+router.get('/register', function (req, res, next) {
     res.render('register.hbs', {
-        cart
+        cart, registerData
     });
 });
 
-router.get('/cart', function(req, res, next) {
+router.get('/cart', function (req, res, next) {
     res.render('cart.hbs', {
         cart
     });
@@ -61,7 +64,7 @@ router.get('/cart', function(req, res, next) {
 
 
 // cart operations 
-router.post('/cart/:operation', function(req, res) {
+router.post('/cart/:operation', function (req, res) {
     const operation = req.params.operation;
     console.log('Hello')
     let count = 0;
