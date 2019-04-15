@@ -39,6 +39,9 @@ jspm_packages/
 #dist folder
 dist/
 
+# public folder 
+resources/css
+
 # TypeScript v1 declaration files
 typings/
 
