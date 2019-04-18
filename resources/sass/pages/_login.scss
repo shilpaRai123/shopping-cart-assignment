@@ -1,26 +1,41 @@
 // Login  page Css
-.login-form {
-    padding: 20px 40px;
-}
 
-.login-text {
+
+.login__content{
+&__text{
+   @include form-left-text; 
+}
+&__heading{
+    @include form-text-heading;
+}
+}
+/*.login__content__text {
     @include form-left-text;
 }
 
-.login-heading {
+.login__content__heading {
     @include form-text-heading;
 }
 
-.login-btn {
+.login__form__btn {
     @include form-btn;
 }
+*/
+
+.login__form {
+    padding: 20px 40px;
+    &__btn {
+    @include form-btn;
+}
+}
+
 
 @media screen and (max-width: 480px) {
     /*login page */
-    .login-form {
+    .login__form {
         padding: 20px 0px;
     }
-    .login-text-box {
+    .login__content {
         margin-left: -10%;
     }
 }
@@ -30,10 +45,10 @@
 
 @media screen and (max-width: 767px) {
     /*login page */
-    .login-form {
+    .login__form {
         padding: 20px 0px;
     }
-    .login-text-box {
+    .login__content {
         margin-left: -10%;
     }
 }
@@ -43,10 +58,10 @@
 
 @media screen and (max-width: 1023px) {
     /*login page */
-    .login-form {
+    .login__form {
         padding: 20px 0px;
     }
-    .login-text-box {
+    .login__content {
         margin-left: -10%;
     }
 }
