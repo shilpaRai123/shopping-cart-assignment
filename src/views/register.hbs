@@ -1,14 +1,14 @@
 <div class="wrap container-fluid" style="margin-top: 3em;">
     <section>
-        <div class="row">
-            <div class="col-xs-7 signup-text-box">
-                <p class="signup-heading">Signup
+        <div class="signup row">
+            <div class="signup__content col-xs-7">
+                <p class="signup__content__heading">Signup
                 </p>
-                <p class="signup-text">We do not share your personal details with anyone.
+                <p class="signup__content__text">We do not share your personal details with anyone.
                 </p>
             </div>
             <div class="col-xs-5">
-                <form class="signup-form">
+                <form class="signup__form">
 
                     {{#each registerData}}
                     <div class="form-group">
@@ -18,7 +18,7 @@
                     </div>
                     {{/each}}
                     <div class="form-group">
-                        <button class="signup-btn">Signup
+                        <button class="signup__form__btn">Signup
                         </button>
                     </div>
                 </form>
