@@ -1,42 +1,40 @@
 <main id="categories-id">
-    <section class="home-section">
-        <div class="row">
+    <section class="home">
+        <div class="home__row">
             <div class="col-xs-12">
-                <div class="slider_img">
-                    <div class="w3-content w3-display-container">
-                        {{#each banners}}
-                        <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="offer">
-                        {{/each}}
-                        <button id="prev-button-js" class="w3-button
+                <div class="w3-content w3-display-container">
+                    {{#each banners}}
+                    <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="home__row__slider">
+                    {{/each}}
+                    <button id="prev-button-js" class="w3-button
                                 w3-grey w3-display-left
                                 hide">PREV
-                        </button>
-                        <button id="next-button-js" class="w3-button
+                    </button>
+                    <button id="next-button-js" class="w3-button
                                 w3-grey
                                 w3-display-right hide">NEXT
-                        </button>
-                        {{#each banners}}
-                        <span class="w3-badge demo w3-border
-                                w3-transparent w3-hover-black slider-dot"
-                            onclick="currentSlide({{math @index "+" 1}})"></span>
-                        {{/each}}
-                    </div>
+                    </button>
+                    {{#each banners}}
+                    <span class="w3-badge demo w3-border
+                                w3-transparent w3-hover-black home__row__slider--dot"
+                        onclick="currentSlide({{math @index "+" 1}})"></span>
+                    {{/each}}
                 </div>
             </div>
         </div>
     </section>
     {{#each categories}}
-    <section class="home-section">
-        <div class="row">
+    <section class="home">
+        <div class="home__row">
             <div class="col-xs-4">
-                <img src="{{this.imageUrl}}" alt="{{this.name}}" class="cat-inner-img">
+                <img src="{{this.imageUrl}}" alt="{{this.name}}" class="home__row__img">
             </div>
             <div class="col-xs-8">
-                <div class="cat-inner-heading">{{this.name}}
+                <div class="home__row__heading">{{this.name}}
                 </div>
-                <p class="cat-inner_text">{{this.description}}
+                <p class="home__row__text">{{this.description}}
                 </p>
-                <a href="category/{{this.key}}"> <button class="cat_button">Explore {{this.key}}
+                <a href="category/{{this.key}}"> <button class="home__row__button">Explore {{this.key}}
                     </button></a>
             </div>
         </div>
@@ -49,7 +47,7 @@
     var prev = document.getElementById("prev-button-js");
     var next = document.getElementById("next-button-js");
 
-    var slider_dot = document.getElementsByClassName("slider-dot");
+    var slider_dot = document.getElementsByClassName("home__row__slider--dot");
     var slider_dot = Array.prototype.slice.call(slider_dot)
     var slideIndex = 1;
 
@@ -86,8 +84,8 @@
 
     function showSlide(n) {
         var i;
-        var slides = document.getElementsByClassName("offer");
-        var dots = document.getElementsByClassName("slider-dot");
+        var slides = document.getElementsByClassName("home__row__slider");
+        var dots = document.getElementsByClassName("home__row__slider--dot");
         if (n > slides.length) {
             slideIndex = 1
         }

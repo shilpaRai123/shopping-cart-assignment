@@ -1,23 +1,47 @@
 #categories-id {
-    .home-section {
+    .home {
         padding: 33px 0px;
         max-width: 1140px;
         margin: 0 auto;
         position: relative;
-        .row {
+        &__row {
             @include div-row;
             text-align: center;
             flex-direction: row;
+            &__slider {
+                display: none;
+                width: 100%;
+            }
+            &__button {
+                background: $color_red;
+                color: $color_white;
+                border-color: $color_red;
+                padding: 1%;
+                font-weight: 500;
+                font-size: 1em;
+                /* line-height: 2%; */
+            }
+            &__heading {
+                font-family: $primary_font !important;
+                font-weight: 700 !important;
+                font-size: 22px !important;
+            }
+            &__img {
+                width: 60%;
+            }
+            &__text {
+                font-weight: 500;
+                font-size: 15px;
+                /* line-height: 50px; */
+                padding: 2%;
+            }
         }
         &:nth-child(odd) {
-            .row {
+           .home__row {
                 flex-direction: row-reverse;
             }
         }
-        .offer {
-            display: none;
-            width: 100%;
-        }
+       
         .w3-transparent {
             background-color: #7f7f7f !important;
         }
@@ -46,31 +70,9 @@
         .w3-content {
             max-width: 1150px !important;
         }
-        .cat_button {
-            background: $color_red;
-            color: $color_white;
-            border-color: $color_red;
-            padding: 1%;
-            font-weight: 500;
-            font-size: 1em;
-            /* line-height: 2%; */
-        }
-        .cat-inner-heading {
-            font-family: $primary_font !important;
-            font-weight: 700 !important;
-            font-size: 22px !important;
-        }
-        .cat-inner-img {
-            width: 60%;
-        }
-        .cat-inner_text {
-            font-weight: 500;
-            font-size: 15px;
-            /* line-height: 50px; */
-            padding: 2%;
-        }
+   
     }
-    .home-section:after {
+    .home:after {
         content: '';
         display: block;
         position: absolute;
@@ -82,7 +84,7 @@
     /* for mobile */
     @media screen and (max-width: 480px) {
         /* for ipad  menu css */
-        .cat-inner-img {
+        .home__row__img {
             width: 125% !important;
             margin-top: 31%;
         }
@@ -96,7 +98,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .cat-inner-img {
+    .home__row__img {
         width: 116% !important;
     }
 }
