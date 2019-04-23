@@ -11,8 +11,8 @@ form {
 }
 
 h1 {
-    color: $color_lightblue;
-    font-family: $primary_font;
+    color: $color-lightblue;
+    font-family: $primary-font;
 }
 
 .form-group {
@@ -45,12 +45,12 @@ h1 {
         &:focus,
         &:valid {
             outline: none;
-            box-shadow: 0 1px $color_lightblue;
-            border-color: $color_lightblue;
+            box-shadow: 0 1px $color-lightblue;
+            border-color: $color-lightblue;
             +.form-label {
                 font-weight: 500;
                 font-size: 16px;
-                color: $color_lightblue;
+                color: $color-lightblue;
                 -o-transform: translateY(-20px);
                 -ms-transform: translateY(-20px);
                 -moz-transform: translateY(-20px);

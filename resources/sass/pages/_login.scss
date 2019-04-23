@@ -1,6 +1,8 @@
 // Login  page Css
 
-
+#login_page{
+margin-top: 3em;
+}
 .login__content{
 &__text{
    @include form-left-text; 
@@ -9,18 +11,6 @@
     @include form-text-heading;
 }
 }
-/*.login__content__text {
-    @include form-left-text;
-}
-
-.login__content__heading {
-    @include form-text-heading;
-}
-
-.login__form__btn {
-    @include form-btn;
-}
-*/
 
 .login__form {
     padding: 20px 40px;

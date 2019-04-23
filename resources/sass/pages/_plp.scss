@@ -21,7 +21,7 @@
         .product__list__detail__box {
             padding-top: 20px;
             padding-bottom: 10px;
-            border-bottom: 1px dashed $plp_item_bg_color;
+            border-bottom: 1px dashed $plp-item-bg-color;
             margin-bottom: 40px;
             .product-pricing {
                 margin-top: 15px;
@@ -44,7 +44,7 @@
             .description-box {
                 overflow: hidden;
                 height: 100px;
-                background-color: $plp_item_bg_color;
+                background-color: $plp-item-bg-color;
                 padding: 8px 8px;
                 font-size: 70%;
                 min-height: 100px;
@@ -59,9 +59,9 @@
                 align-items: flex-start;
                 text-align: center;
                 padding: 10px;
-                background: $color_red;
+                background: $color-red;
                 a {
-                    color: $color_white;
+                    color: $color-white;
                 }
                 @media screen and (max-width: 1024px) {
                     display: block;
@@ -75,14 +75,14 @@
     font-size: 65%;
     padding: 10px;
     background: $color-red;
-    color: $color_white;
+    color: $color-white;
 }
 
 .button-large {
     font-size: 80%;
     padding: 10px;
     background: $color-red;
-    color: $color_white;
+    color: $color-white;
     border: none;
     width: 100%;
     margin-top: 20px;
@@ -174,7 +174,7 @@ a {
         top: 0;
         font-size: 80%;
         background-color: $color-red;
-        color: $color_white;
+        color: $color-white;
         padding: 1%;
     }
     #page-nav label:after {

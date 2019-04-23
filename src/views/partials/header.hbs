@@ -9,7 +9,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="product" class="hide">Product
+                        <a href="/product" class="hide">Product
                         </a>
                     </li>
                 </ul>
@@ -17,11 +17,11 @@
             <div class="super-header">
                 <ul class="header-nav">
                     <li>
-                        <a href="login">SignIn
+                        <a href="/login">SignIn
                         </a>
                     </li>
                     <li>
-                        <a href="register">Register
+                        <a href="/register">Register
                         </a>
                     </li>
                 </ul>
@@ -34,7 +34,8 @@
                     <p class="hide nav__end-cart--count">{{cart.count}} items
                     </p>
                     <button class="show
-                        w3-button w3-teal w3-xlarge" id="mobile-menu-open">☰
+                        w3-button  w3-xlarge" id="mobile-menu-open"><img src="/static/images/mobile_menu.svg"
+                            alt="cart" class="img">
                     </button>
                 </span>
             </div>
@@ -42,22 +43,23 @@
     </nav>
 </header>
 <div class="mobile_menu">
-    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="sidebar-menu">
+    <div class="w3-sidebar w3-bar-block w3-border-right" id="sidebar-menu">
         <a href="/" class="w3-bar-item">Home
-            <span id="mobile-menu-close" style="float: right;">
+            <span id="mobile-menu-close">
                 &times;
             </span>
         </a>
-        <a href="product" class="w3-bar-item">Product
+        <a href="/product" class="w3-bar-item">Product
         </a>
-        <a href="login" class="w3-bar-item">SignIn
+        <a href="/login" class="w3-bar-item">SignIn
         </a>
-        <a href="register" class="w3-bar-item">Register
+        <a href="/register" class="w3-bar-item">Register
         </a>
     </div>
 </div>
 <script>
     /*  Menu for Mobile  */
+    document.getElementById("sidebar-menu").style.display = "none";
     function w3_open() {
         document.getElementById("sidebar-menu").style.display = "block";
     }

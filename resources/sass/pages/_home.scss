@@ -13,16 +13,16 @@
                 width: 100%;
             }
             &__button {
-                background: $color_red;
-                color: $color_white;
-                border-color: $color_red;
+                background: $color-red;
+                color: $color-white;
+                border-color: $color-red;
                 padding: 1%;
                 font-weight: 500;
                 font-size: 1em;
                 /* line-height: 2%; */
             }
             &__heading {
-                font-family: $primary_font !important;
+                font-family: $primary-font !important;
                 font-weight: 700 !important;
                 font-size: 22px !important;
             }
@@ -62,9 +62,9 @@
             font-weight: 400;
         }
         .w3-button {
-            color: $color_white !important;
+            color: $color-white !important;
             &:hover {
-                color: $color_white !important;
+                color: $color-white !important;
             }
         }
         .w3-content {
