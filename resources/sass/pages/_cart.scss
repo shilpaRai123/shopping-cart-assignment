@@ -29,7 +29,7 @@ main.cart {
     max-width: 1140px;
     margin: 0 auto;
     position: relative;
-    .cart-header {
+    .cart__header {
         @extend .flex-column;
         background: $color-black;
         padding: 10px;
@@ -39,17 +39,18 @@ main.cart {
     }
 }
 
-.cart-item {
+.cart__item {
     @extend .flex-row;
     margin-top: 10px;
     background: $color-white;
+    padding: 5px;
     &__logo {
         width: 20%;
         height: 20%;
     }
 }
 
-.cart-item-detail {
+.cart__item__detail {
     @extend .flex-column;
     &__heading {
         font-size: 1.5rem;
@@ -96,40 +97,38 @@ main.cart {
     background: $color-white;
 }
 
-.button-small-checkout {
-    border: $color-red;
-    font-size: 100%;
-    padding: 10px;
-    background: $color-red;
-    color: $color-white;
-    width: 100%;
-    text-align: left;
-}
-
-.button-price {
-    float: right;
-}
-
-.checkout-box {
+.checkout__box {
     margin-top: 16px;
     width: 100%;
     padding: 12px;
     background: $color-white;
-    .checkout-text {
+    &__text {
         text-align: center;
+    }
+    &__button {
+        border: $color-red;
+        font-size: 100%;
+        padding: 10px;
+        background: $color-red;
+        color: $color-white;
+        width: 100%;
+        text-align: left;
+        &--price {
+            float: right;
+        }
     }
 }
 
-.cart-modal {
+.cart__modal {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 31%;
+    left: 14%;
     top: 0;
     width: 100%;
     height: 87%;
     top: 12%;
-    &-content {
+    &__content {
         position: absolute;
         top: 0;
         left: 0%;
@@ -139,35 +138,23 @@ main.cart {
         margin-right: 35%;
         border: 1px solid $color-black;
     }
-    &-header {
+    &__header {
         padding: 2px 16px;
         background-color: $color-black;
         color: $color-white;
         height: 60px;
         font-family: $primary-font;
-        .close {
-            color: $color-white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            &:hover,
-            &:focus {
-                color: $color-black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-        }
     }
-    &-body {
+    &__body {
         font-family: $primary-font;
         height: 80%;
         overflow-y: scroll;
         width: 500px;
     }
-    &-footer {
+    &__footer {
         padding: 2px 16px;
         margin-top: 10px;
-        &-text {
+        &__text {
             background: $color-white;
             padding: 5px;
             width: 100%;
@@ -193,17 +180,29 @@ h6 {
     margin: 10px 0;
 }
 
-.modal-view {
+.close {
+    color: $color-white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    &:hover,
+    &:focus {
+        color: $color-black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.modal__view {
     padding-bottom: 13px;
 }
 
-.blank-cart {
+.blank__cart {
     text-align: center;
     vertical-align: 40%;
-}
-
-.blank-cart-text {
-    margin-top: 40%;
+    &__text {
+        margin-top: 40%;
+    }
 }
 
 .font-size {
