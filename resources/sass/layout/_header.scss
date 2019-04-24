@@ -65,30 +65,40 @@ header {
 
 .w3-teal,
 .w3-hover-teal:hover {
-    color: #fff !important;
-    background-color: #0e0e0e !important;
+    color: #fff ;
+    background-color: #0e0e0e ;
 }
 
 #mobile-menu-close{
     float: right;
-
+    background-color: inherit;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
 }
+
+
+
 
 
 /* for ipad */
 
 @media screen and (max-width: 480px) {
+
+     #cart-section {
+        margin-top: 0%;
+    }
     .show {
-        display: block !important;
+        display: block ;
     }
     .hide-menu {
-        display: none !important;
+        display: none ;
     }
     .hide {
-        display: none !important;
+        display: none ;
     }
     .header-nav {
-        display: none !important;
+        display: none ;
     }
     .row-header {
         @include div-row;
@@ -100,16 +110,14 @@ header {
         width: 25%;
         padding: 2%;
     }
-    .cart-section {
-        margin-top: -7% !important;
-    }
+  
     body {
         padding: 2%;
     }
     .w3-teal,
     .w3-hover-teal:hover {
-        color: #fff !important;
-        background-color: #0e0e0e !important;
+        color: #fff ;
+        background-color: #0e0e0e ;
     }
     .mobile_menu {
         margin-left: 55%;
@@ -120,10 +128,10 @@ header {
             text-decoration: none;
         }
         .w3-sidebar {
-            height: auto !important;
+            height: auto ;
             width: 200px;
-            background-color: #eaeaea !important;
-            position: fixed !important;
+            background-color: #eaeaea ;
+            position: fixed ;
             z-index: 1;
             overflow: auto;
         }
@@ -134,13 +142,11 @@ header {
 /*tablet */
 
 @media screen and (max-width: 767px) {
-    .show {
-        display: none;
-    }
+   
     .super-header {
         padding-right: 1%;
     }
-    .cart-section {
+   .cart-section {
         margin-left: 16%;
     }
 }
@@ -149,13 +155,12 @@ header {
 /*tablet  landscape*/
 
 @media screen and (max-width: 1023px) {
-    .show {
-        display: none;
-    }
+   
     .super-header {
         padding-right: 1%;
     }
     .cart-section {
         margin-left: 16%;
     }
+   
 }

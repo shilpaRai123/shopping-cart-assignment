@@ -22,9 +22,10 @@
                 /* line-height: 2%; */
             }
             &__heading {
-                font-family: $primary-font !important;
-                font-weight: 700 !important;
-                font-size: 22px !important;
+                font-family: $primary-font ;
+                font-weight: 700 ;
+                
+                font-size: 22px ;
             }
             &__img {
                 width: 60%;
@@ -43,7 +44,7 @@
         }
        
         .w3-transparent {
-            background-color: #7f7f7f !important;
+            background-color: #7f7f7f ;
         }
         .w3-left,
         .w3-right {
@@ -57,18 +58,18 @@
             cursor: pointer
         }
         .w3-grey {
-            background-color: #999999 !important;
+            background-color: #999999 ;
             opacity: 0.6;
             font-weight: 400;
         }
         .w3-button {
-            color: $color-white !important;
+            color: $color-white ;
             &:hover {
-                color: $color-white !important;
+                color: $color-white ;
             }
         }
         .w3-content {
-            max-width: 1150px !important;
+            max-width: 1150px ;
         }
    
     }
@@ -85,7 +86,7 @@
     @media screen and (max-width: 480px) {
         /* for ipad  menu css */
         .home__row__img {
-            width: 125% !important;
+            width: 125% ;
             margin-top: 31%;
         }
         .w3-btn,
@@ -99,7 +100,7 @@
 
 @media screen and (max-width: 767px) {
     .home__row__img {
-        width: 116% !important;
+        width: 116% ;
     }
 }
 
