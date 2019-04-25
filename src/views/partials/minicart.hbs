@@ -11,7 +11,7 @@
         </div>
         <div class="cart__modal__body">
             {{#if cart.items}} {{#each cart.items}}
-            <div class="cart__item modal-view" data-id="{{product.id}}">
+            <div class="cart__item" data-id="{{product.id}}">
                 <img src="{{product.imageURL}}" alt="{{product.name}}" class="cart__item__logo" />
                 <div class="cart__item__detail">
                     <h4 class="cart__item__detail__heading font-size">{{product.name}}</h4>

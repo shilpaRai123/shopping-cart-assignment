@@ -6,17 +6,17 @@
                     {{#each banners}}
                     <img src="{{this.bannerImageUrl}}" alt="{{this.bannerImageAlt}}" class="home__row__slider">
                     {{/each}}
-                    <button id="prev-button-js" class="w3-button
+                    <button id="prev-button-js" class="hide__icon 
                                 w3-grey w3-display-left
-                                hide">PREV
+                                ">PREV
                     </button>
-                    <button id="next-button-js" class="w3-button
+                    <button id="next-button-js" class=" hide__icon 
                                 w3-grey
-                                w3-display-right hide">NEXT
+                                w3-display-right">NEXT
                     </button>
                     {{#each banners}}
                     <span class="w3-badge demo w3-border
-                                w3-transparent w3-hover-black home__row__slider--dot"
+                                 w3-hover-black home__row__slider--dot"
                         onclick="currentSlide({{math @index "+" 1}})"></span>
                     {{/each}}
                 </div>
