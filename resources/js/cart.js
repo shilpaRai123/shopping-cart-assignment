@@ -21,8 +21,7 @@ const cartController = (function() {
           'span[class="cart__item__detail__info--total"][data-id="' +
             itemId +
             '"]'
-        )[0].innerHTML =
-          "Rs." + price * count;
+        )[0].innerHTML = "Rs." + price * count;
       } else {
         let elem = document.querySelectorAll(
           'div[class="cart__item"][data-id="' + itemId + '"]'
@@ -34,8 +33,7 @@ const cartController = (function() {
 
       document.getElementsByClassName(
         "checkout__box__button--price"
-      )[0].innerHTML =
-        "Rs." + totalPrice;
+      )[0].innerHTML = "Rs." + totalPrice;
     }
   };
 })();
@@ -76,6 +74,6 @@ const cartController = (function() {
 })(
   document.getElementsByClassName("cart__item__detail__info--remove"),
   document.getElementsByClassName("cart__item__detail__info--add"),
-  document.getElementsByClassName("nav__end-cart--count")[0],
+  document.getElementsByClassName("nav__end__cart--count")[0],
   cartController
 );

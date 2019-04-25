@@ -20,5 +20,5 @@
   });
 })(
   document.getElementsByClassName("product__card__buy--btn"),
-  document.getElementsByClassName("nav__end-cart--count")[0]
+  document.getElementsByClassName("nav__end__cart--count")[0]
 );
