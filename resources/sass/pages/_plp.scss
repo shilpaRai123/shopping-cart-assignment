@@ -125,7 +125,7 @@ a {
     .product__list__detail__pricing {
       span {
         position: relative;
-        color: #fff;
+        color: $color-white;
         &:before {
           content: "@";
         }
@@ -160,9 +160,9 @@ a {
     height: 14px;
     position: absolute;
     right: 15px;
-    color: #fff;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    color: $color-white;
+    border-left: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
     transform: rotate(-45deg);
   }
   #page-nav {
