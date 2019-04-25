@@ -17,12 +17,22 @@
 
 .product__list {
   padding-top: 15px;
-  .product__list__detail__box {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed $plp-item-bg-color;
-    margin-bottom: 40px;
-    .description-box {
+  .product__list__detail {
+    &__box {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed $plp-item-bg-color;
+      margin-bottom: 40px;
+      h3 {
+        font-size: 13px;
+        min-height: 80px;
+        font-weight: bold;
+      }
+      &__img {
+        width: 100%;
+      }
+    }
+    &__description {
       overflow: hidden;
       height: 100px;
       background-color: $plp-item-bg-color;
@@ -30,48 +40,28 @@
       font-size: 70%;
       min-height: 100px;
     }
-    h3 {
-      font-size: 13px;
-      min-height: 80px;
-      font-weight: bold;
+    &__pricing {
+      margin-top: 15px;
+      text-align: right;
+      position: relative;
+      span {
+        font-size: 75%;
+        position: absolute;
+        left: 0;
+        color: initial;
+        font-size: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      a {
+        padding: 7px 30px;
+        display: inline-block;
+      }
     }
   }
 }
 
-.buy-now-btn {
-  display: none;
-  align-items: flex-start;
-  text-align: center;
-  padding: 10px;
-  background: $color-red;
-  a {
-    color: $color-white;
-  }
-  @media screen and (max-width: 1024px) {
-    display: block;
-  }
-}
-
-.product-pricing {
-  margin-top: 15px;
-  text-align: right;
-  position: relative;
-  span {
-    font-size: 75%;
-    position: absolute;
-    left: 0;
-    color: initial;
-    font-size: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  a {
-    padding: 7px 30px;
-    display: inline-block;
-  }
-}
-
-.button-small {
+.button__small {
   font-size: 65%;
   padding: 10px;
   background: $color-red;
@@ -86,10 +76,6 @@
   border: none;
   width: 100%;
   margin-top: 20px;
-}
-
-.width-100 {
-  width: 100%;
 }
 
 .plp-section {
@@ -116,7 +102,7 @@ a {
       font-size: 90%;
       min-height: 100px;
     }
-    .product-pricing a {
+    .product__list__detail__pricing a {
       padding: 7px 20px;
     }
   }
@@ -136,7 +122,7 @@ a {
       min-height: 70%;
     }
     min-height: 70%;
-    .product-pricing {
+    .product__list__detail__pricing {
       span {
         position: relative;
         color: #fff;
@@ -197,7 +183,7 @@ a {
     p {
       font-size: 50%;
     }
-    .product-pricing a {
+    .product__list__detail__pricing a {
       padding: 7px;
       font-size: 50%;
     }
