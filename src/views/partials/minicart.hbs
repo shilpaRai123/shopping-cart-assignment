@@ -1,0 +1,75 @@
+<!-- The Modal -->
+<div id="cart__modal__id" class="cart__modal">
+    <!-- Modal content -->
+    <div class="cart__modal__content">
+        <!-- Modal header -->
+        <div class="cart__modal__header">
+            <span class="close">&times;
+            </span>
+            <h4>My Cart {{cart.count}} items
+            </h4>
+        </div>
+        <div class="cart__modal__body">
+            {{#if cart.items}} {{#each cart.items}}
+            <div class="cart__item" data-id="{{product.id}}">
+                <img src="{{product.imageURL}}" alt="{{product.name}}" class="cart__item__logo" />
+                <div class="cart__item__detail">
+                    <h4 class="cart__item__detail__heading font-size">{{product.name}}</h4>
+                    <div class="cart__item__detail__info">
+                        <div class="cart__item__detail__info--count">
+                            <a class="cart__item__detail__info--remove" data-id="{{product.id}}">&#45;</a>
+                            <span data-id="{{product.id}}">{{count}}</span>
+                            <a class="cart__item__detail__info--add" data-id="{{product.id}}">&#43;</a>*
+                            Rs.{{product.price}}
+                        </div>
+                        <span class="cart__item__detail__info--total" data-id="{{product.id}}"> Rs.{{totalPrice}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {{/each }} {{else}}
+            <span class="blank__cart">
+                <h4 class="blank__cart__text">No items in your cart
+                </h4>
+                <h6>Your Favourite items are just a click away
+                </h6>
+            </span> {{/if}}
+        </div>
+        <!-- Modal footer-->
+        <div class="cart__modal__footer">
+            <button class="cart__modal__footer__text">
+                {{#if cart.items}}
+                <a href="/cart">
+                    <span>Proceed to checkout </span></a>
+                {{else}}
+                <a href="/product">
+                    <span>Start Shopping</span></a>
+                {{/if}}
+            </button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/cart.js"></script>
+<script>
+    /*  Get the modal  */
+    var modal = document.getElementById('cart__modal__id');
+    var btn = document.getElementById("cart-img-id");
+    var span = document.getElementsByClassName("close")[0];
+
+    /*   if (typeof (btn) != 'undefined' && btn != null) { */
+    btn.onmouseover = function () {
+        modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+    window.onmouseover = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // }
+
+</script>
